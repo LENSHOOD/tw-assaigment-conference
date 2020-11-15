@@ -14,4 +14,8 @@ public class Length {
     public static Length createLightning() {
         return new Length(5);
     }
+
+    public int getDurationNum() {
+        return durationNum;
+    }
 }

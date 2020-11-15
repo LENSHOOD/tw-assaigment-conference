@@ -10,4 +10,12 @@ public class Talk {
         this.name = name;
         this.length = length;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public Length getLength() {
+        return length;
+    }
 }
