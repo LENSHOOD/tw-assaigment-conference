@@ -24,7 +24,7 @@ public class Session {
     }
 
     public List<Talk> getTalks() {
-        return talks;
+        return List.copyOf(talks);
     }
 
     public void addTalk(Talk talk) {
