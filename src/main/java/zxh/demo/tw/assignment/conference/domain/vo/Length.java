@@ -1,10 +1,10 @@
 package zxh.demo.tw.assignment.conference.domain.vo;
 
 public class Length {
-    private final int durationNum;
+    private final int durationMinutes;
 
     private Length(int lengthNum) {
-        this.durationNum = lengthNum;
+        this.durationMinutes = lengthNum;
     }
 
     public static Length createNormal(int minutes) {
@@ -15,7 +15,7 @@ public class Length {
         return new Length(5);
     }
 
-    public int getDurationNum() {
-        return durationNum;
+    public int getDurationMinutes() {
+        return durationMinutes;
     }
 }

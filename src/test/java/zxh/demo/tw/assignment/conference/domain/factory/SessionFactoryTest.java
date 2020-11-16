@@ -2,7 +2,6 @@ package zxh.demo.tw.assignment.conference.domain.factory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import zxh.demo.tw.assignment.conference.domain.entity.Session;
 import zxh.demo.tw.assignment.conference.domain.vo.SessionType;
@@ -16,7 +15,7 @@ class SessionFactoryTest {
         assertEquals(LocalTime.of(9, 0), morning.getBegin());
         assertEquals(LocalTime.of(12, 0), morning.getEnd());
         assertEquals("Lunch", morning.getTalks().get(0).getName());
-        assertEquals(0, morning.getTalks().get(0).getLength().getDurationNum());
+        assertEquals(0, morning.getTalks().get(0).getLength().getDurationMinutes());
     }
 
     @Test
@@ -26,6 +25,6 @@ class SessionFactoryTest {
         assertEquals(LocalTime.of(13, 0), morning.getBegin());
         assertEquals(LocalTime.of(17, 0), morning.getEnd());
         assertEquals("Networking Event", morning.getTalks().get(0).getName());
-        assertEquals(0, morning.getTalks().get(0).getLength().getDurationNum());
+        assertEquals(0, morning.getTalks().get(0).getLength().getDurationMinutes());
     }
 }

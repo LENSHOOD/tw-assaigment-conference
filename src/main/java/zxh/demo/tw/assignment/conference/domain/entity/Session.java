@@ -28,8 +28,8 @@ public class Session {
     }
 
     public void addTalk(Talk talk) {
-        long wholeDuration = talks.stream().mapToLong(t -> t.getLength().getDurationNum()).sum();
-        boolean isFull = begin.plusMinutes(wholeDuration).plusMinutes(talk.getLength().getDurationNum()).isAfter(end);
+        long wholeDuration = talks.stream().mapToLong(t -> t.getLength().getDurationMinutes()).sum();
+        boolean isFull = begin.plusMinutes(wholeDuration).plusMinutes(talk.getLength().getDurationMinutes()).isAfter(end);
 
         if (isFull) {
             throw new SessionFullException();
