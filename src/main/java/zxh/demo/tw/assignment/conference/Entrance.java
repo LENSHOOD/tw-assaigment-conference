@@ -1,13 +1,10 @@
 package zxh.demo.tw.assignment.conference;
 
-import static java.util.Objects.*;
+import static java.util.Objects.isNull;
 
 import zxh.demo.tw.assignment.conference.app.ArrangeConferenceUseCase;
-import java.io.OutputStream;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Path;
-import java.util.Objects;
 
 public class Entrance {
     private static final String TALK_DESCRIPTION_RESOURCE_NAME = "TalkDescriptions";

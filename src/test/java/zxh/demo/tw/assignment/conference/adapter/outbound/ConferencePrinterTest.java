@@ -1,12 +1,9 @@
 package zxh.demo.tw.assignment.conference.adapter.outbound;
 
-import static org.hamcrest.MatcherAssert.*;
-import static org.hamcrest.Matchers.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import zxh.demo.tw.assignment.conference.domain.entity.Conference;
 import zxh.demo.tw.assignment.conference.domain.entity.Session;

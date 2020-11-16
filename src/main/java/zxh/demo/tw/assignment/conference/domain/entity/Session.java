@@ -5,7 +5,8 @@ import zxh.demo.tw.assignment.conference.domain.vo.EndEvent;
 import zxh.demo.tw.assignment.conference.domain.vo.Talk;
 import zxh.demo.tw.assignment.conference.domain.vo.TalkSchedule;
 import java.time.LocalTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Session {
     private final LocalTime begin;

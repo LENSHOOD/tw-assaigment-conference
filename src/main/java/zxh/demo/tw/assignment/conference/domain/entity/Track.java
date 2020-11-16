@@ -5,7 +5,8 @@ import zxh.demo.tw.assignment.conference.domain.exception.TrackFullException;
 import zxh.demo.tw.assignment.conference.domain.factory.SessionFactory;
 import zxh.demo.tw.assignment.conference.domain.vo.SessionType;
 import zxh.demo.tw.assignment.conference.domain.vo.Talk;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Track {
     private final List<Session> sessions = new ArrayList<>();

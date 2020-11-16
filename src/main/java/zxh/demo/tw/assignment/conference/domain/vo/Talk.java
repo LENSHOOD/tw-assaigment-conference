@@ -1,7 +1,5 @@
 package zxh.demo.tw.assignment.conference.domain.vo;
 
-import zxh.demo.tw.assignment.conference.domain.vo.Length;
-
 public class Talk {
     private final String name;
     private final Length length;

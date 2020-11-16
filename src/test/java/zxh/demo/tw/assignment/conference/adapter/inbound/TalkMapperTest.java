@@ -1,8 +1,9 @@
 package zxh.demo.tw.assignment.conference.adapter.inbound;
 
-import static org.hamcrest.MatcherAssert.*;
-import static org.hamcrest.Matchers.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
 import zxh.demo.tw.assignment.conference.adapter.exception.IllegalTalkDescriptionException;

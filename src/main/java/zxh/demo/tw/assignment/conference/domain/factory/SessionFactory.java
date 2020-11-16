@@ -2,8 +2,6 @@ package zxh.demo.tw.assignment.conference.domain.factory;
 
 import zxh.demo.tw.assignment.conference.domain.entity.Session;
 import zxh.demo.tw.assignment.conference.domain.vo.EndEvent;
-import zxh.demo.tw.assignment.conference.domain.vo.Talk;
-import zxh.demo.tw.assignment.conference.domain.vo.Length;
 import zxh.demo.tw.assignment.conference.domain.vo.SessionType;
 import java.time.LocalTime;
 
