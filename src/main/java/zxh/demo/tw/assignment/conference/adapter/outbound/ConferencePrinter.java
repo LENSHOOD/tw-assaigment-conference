@@ -1,5 +1,6 @@
 package zxh.demo.tw.assignment.conference.adapter.outbound;
 
+import zxh.demo.tw.assignment.conference.domain.entity.Conference;
 import zxh.demo.tw.assignment.conference.domain.entity.Session;
 import zxh.demo.tw.assignment.conference.domain.entity.Track;
 import zxh.demo.tw.assignment.conference.domain.vo.Length;
@@ -11,6 +12,19 @@ public class ConferencePrinter {
     private static final DateTimeFormatter TIME_FORMAT = DateTimeFormatter.ofPattern("hh:mma");
 
     private ConferencePrinter() {}
+
+    static String convertConference(Conference conference) {
+        StringBuilder conferenceStrBuilder = new StringBuilder();
+        for (int i = 0; i < conference.getTracks().size(); i++) {
+            conferenceStrBuilder.append("Track ")
+                    .append(i + 1)
+                    .append(":")
+                    .append("\n")
+                    .append(convertTrack(conference.getTracks().get(i)))
+                    .append("\n");
+        }
+        return conferenceStrBuilder.toString();
+    }
 
     static String convertTrack(Track track) {
         StringBuilder trackStrBuilder = new StringBuilder();
