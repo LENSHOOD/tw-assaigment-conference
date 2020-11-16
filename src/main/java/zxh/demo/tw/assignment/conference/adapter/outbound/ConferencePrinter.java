@@ -5,6 +5,10 @@ import zxh.demo.tw.assignment.conference.domain.entity.Session;
 import zxh.demo.tw.assignment.conference.domain.entity.Track;
 import zxh.demo.tw.assignment.conference.domain.vo.Length;
 import zxh.demo.tw.assignment.conference.domain.vo.TalkSchedule;
+import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -12,6 +16,12 @@ public class ConferencePrinter {
     private static final DateTimeFormatter TIME_FORMAT = DateTimeFormatter.ofPattern("hh:mma");
 
     private ConferencePrinter() {}
+
+    public static void print(Conference conference, OutputStream outputStream) {
+        try (PrintWriter writer = new PrintWriter(outputStream)){
+            writer.print(convertConference(conference));
+        }
+    }
 
     static String convertConference(Conference conference) {
         StringBuilder conferenceStrBuilder = new StringBuilder();

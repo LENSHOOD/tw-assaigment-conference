@@ -15,23 +15,23 @@ public class TalkMapper {
      * Group2: minutes or lightning
      * Group3: (if exists) minutes number
      */
-    private static final Pattern TALK_DESCRIPTION = Pattern.compile("([A-Za-z ]+) ((\\d+)min|lightning)");
+    private static final Pattern TALK_DESCRIPTION = Pattern.compile("(.+) ((\\d+)min|lightning)");
 
     private TalkMapper() {}
 
     public static Talk toTalk(String talkDescription) {
         if (isNull(talkDescription) || talkDescription.isBlank()) {
-            throw new IllegalTalkDescriptionException();
+            throw new IllegalTalkDescriptionException(talkDescription);
         }
 
         Matcher talkMatcher = TALK_DESCRIPTION.matcher(talkDescription);
         if (!talkMatcher.matches()) {
-            throw new IllegalTalkDescriptionException();
+            throw new IllegalTalkDescriptionException(talkDescription);
         }
 
         String talkName = talkMatcher.group(1);
         if (talkName.isBlank()) {
-            throw new IllegalTalkDescriptionException();
+            throw new IllegalTalkDescriptionException(talkDescription);
         }
 
         String minutesStr = talkMatcher.group(3);
