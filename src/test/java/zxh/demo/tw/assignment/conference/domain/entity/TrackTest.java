@@ -4,11 +4,10 @@ import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import zxh.demo.tw.assignment.conference.domain.exception.TrackFullException;
 import zxh.demo.tw.assignment.conference.domain.vo.Length;
+import zxh.demo.tw.assignment.conference.domain.vo.Talk;
 
 class TrackTest {
     @Test

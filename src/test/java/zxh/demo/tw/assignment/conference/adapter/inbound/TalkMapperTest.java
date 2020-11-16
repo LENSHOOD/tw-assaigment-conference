@@ -6,8 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 import zxh.demo.tw.assignment.conference.adapter.exception.IllegalTalkDescriptionException;
-import zxh.demo.tw.assignment.conference.adapter.inbound.TalkMapper;
-import zxh.demo.tw.assignment.conference.domain.entity.Talk;
+import zxh.demo.tw.assignment.conference.domain.vo.Talk;
 
 class TalkMapperTest {
     @Test

@@ -2,6 +2,7 @@ package zxh.demo.tw.assignment.conference.domain.entity;
 
 import zxh.demo.tw.assignment.conference.domain.exception.TooLongTalkException;
 import zxh.demo.tw.assignment.conference.domain.exception.TrackFullException;
+import zxh.demo.tw.assignment.conference.domain.vo.Talk;
 import java.util.ArrayList;
 import java.util.List;
 

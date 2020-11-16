@@ -4,11 +4,10 @@ import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import zxh.demo.tw.assignment.conference.domain.exception.TooLongTalkException;
 import zxh.demo.tw.assignment.conference.domain.vo.Length;
+import zxh.demo.tw.assignment.conference.domain.vo.Talk;
 
 class ConferenceTest {
     @Test
@@ -22,7 +21,7 @@ class ConferenceTest {
 
         // then
         assertThat(conference.getTracks().size(), is(1));
-        assertThat(conference.getTracks().get(0).getSessions().get(0).getTalks().get(1).getName(), is("test1"));
+        assertThat(conference.getTracks().get(0).getSessions().get(0).getTalks().get(0).getName(), is("test1"));
     }
 
     @Test
@@ -40,8 +39,8 @@ class ConferenceTest {
 
         // then
         assertThat(conference.getTracks().size(), is(2));
-        assertThat(conference.getTracks().get(0).getSessions().get(0).getTalks().get(1).getName(), is("test1"));
-        assertThat(conference.getTracks().get(1).getSessions().get(1).getTalks().get(1).getName(), is("test3"));
+        assertThat(conference.getTracks().get(0).getSessions().get(0).getTalks().get(0).getName(), is("test1"));
+        assertThat(conference.getTracks().get(1).getSessions().get(1).getTalks().get(0).getName(), is("test3"));
     }
 
     @Test

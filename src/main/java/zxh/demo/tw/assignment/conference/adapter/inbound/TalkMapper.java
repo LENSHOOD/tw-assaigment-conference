@@ -3,9 +3,8 @@ package zxh.demo.tw.assignment.conference.adapter.inbound;
 import static java.util.Objects.*;
 
 import zxh.demo.tw.assignment.conference.adapter.exception.IllegalTalkDescriptionException;
-import zxh.demo.tw.assignment.conference.domain.entity.Talk;
+import zxh.demo.tw.assignment.conference.domain.vo.Talk;
 import zxh.demo.tw.assignment.conference.domain.vo.Length;
-import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

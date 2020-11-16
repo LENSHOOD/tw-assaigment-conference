@@ -1,18 +1,22 @@
 package zxh.demo.tw.assignment.conference.domain.entity;
 
 import zxh.demo.tw.assignment.conference.domain.exception.SessionFullException;
+import zxh.demo.tw.assignment.conference.domain.vo.EndEvent;
+import zxh.demo.tw.assignment.conference.domain.vo.Talk;
+import zxh.demo.tw.assignment.conference.domain.vo.TalkSchedule;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Session {
     private final LocalTime begin;
     private final LocalTime end;
     private final List<Talk> talks = new ArrayList<>();
+    private final EndEvent endEvent;
 
-    public Session(LocalTime begin, LocalTime end) {
+    public Session(LocalTime begin, LocalTime end, EndEvent endEvent) {
         this.begin = begin;
         this.end = end;
+        this.endEvent = endEvent;
     }
 
     public LocalTime getBegin() {
@@ -36,5 +40,20 @@ public class Session {
         }
 
         talks.add(talk);
+    }
+
+    public List<TalkSchedule> getSessionSchedule() {
+        LocalTime currentTime = begin;
+        List<TalkSchedule> schedules = new ArrayList<>();
+        for (Talk talk : talks) {
+            schedules.add(new TalkSchedule(currentTime, talk));
+            currentTime = currentTime.plusMinutes(talk.getLength().getDurationMinutes());
+        }
+
+        return List.copyOf(schedules);
+    }
+
+    public EndEvent getEndEvent() {
+        return endEvent;
     }
 }

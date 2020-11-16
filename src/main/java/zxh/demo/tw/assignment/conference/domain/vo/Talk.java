@@ -1,4 +1,4 @@
-package zxh.demo.tw.assignment.conference.domain.entity;
+package zxh.demo.tw.assignment.conference.domain.vo;
 
 import zxh.demo.tw.assignment.conference.domain.vo.Length;
 
