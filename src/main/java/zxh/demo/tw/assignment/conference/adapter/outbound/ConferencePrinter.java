@@ -1,6 +1,7 @@
 package zxh.demo.tw.assignment.conference.adapter.outbound;
 
 import zxh.demo.tw.assignment.conference.domain.entity.Session;
+import zxh.demo.tw.assignment.conference.domain.entity.Track;
 import zxh.demo.tw.assignment.conference.domain.vo.Length;
 import zxh.demo.tw.assignment.conference.domain.vo.TalkSchedule;
 import java.time.format.DateTimeFormatter;
@@ -10,6 +11,14 @@ public class ConferencePrinter {
     private static final DateTimeFormatter TIME_FORMAT = DateTimeFormatter.ofPattern("hh:mma");
 
     private ConferencePrinter() {}
+
+    static String convertTrack(Track track) {
+        StringBuilder trackStrBuilder = new StringBuilder();
+        for (Session session : track.getSessions()) {
+            trackStrBuilder.append(convertSession(session)).append("\n");
+        }
+        return trackStrBuilder.toString();
+    }
 
     static String convertSession(Session session) {
         StringBuilder sessionStrBuilder = new StringBuilder();
