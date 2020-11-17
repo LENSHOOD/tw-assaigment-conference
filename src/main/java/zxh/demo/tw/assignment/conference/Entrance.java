@@ -4,6 +4,7 @@ import static java.util.Objects.isNull;
 
 import zxh.demo.tw.assignment.conference.app.ArrangeConferenceUseCase;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Entrance {
@@ -17,9 +18,14 @@ public class Entrance {
         }
 
         try {
-            new ArrangeConferenceUseCase().arrangeConferenceFrom(Path.of(resource.toURI()), System.out);
+            System.out.println("Test Input:");
+            Path inputFilePath = Path.of(resource.toURI());
+            Files.readAllLines(inputFilePath).forEach(System.out::println);
+
+            System.out.printf("%nTest Output:%n");
+            new ArrangeConferenceUseCase().arrangeConferenceFrom(inputFilePath, System.out);
         } catch (Exception e) {
-            System.out.printf("Failed to arrange conference. %s\n", e.getMessage());
+            System.out.printf("Failed to arrange conference. %s%n", e.getMessage());
             System.exit(1);
         }
     }
