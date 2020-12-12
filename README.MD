@@ -1,6 +1,10 @@
 # TW Assignment - Conference Track Management
 
 ## How to
+0. Requirement
+```
+JDK 14
+```
 1. Run
 ```shell
 shell> `./gradlew run`
@@ -29,3 +33,6 @@ Run all tests.
 
 3. Use case
 - *ArrangeConferenceUseCase*: read *Talk* descriptions from txt file, build conference then print.
+
+**Major class relationship diagram:**
+![img](design/major-class-diagram.png)

@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.nio.file.Path;
 
 public class ArrangeConferenceUseCase {
-    public void arrangeConferenceFrom(Path inputFilePath, OutputStream outputStream) {
+    public void arrangeConference(Path inputFilePath, OutputStream outputStream) {
         Conference conference = new Conference();
         TxtReader.readLinesFrom(inputFilePath).stream().map(TalkMapper::toTalk).forEach(conference::arrangeTalk);
         ConferencePrinter.print(conference, outputStream);

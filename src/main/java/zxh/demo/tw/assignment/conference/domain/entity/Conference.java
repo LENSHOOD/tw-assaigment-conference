@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Conference {
-    private List<Track> tracks = new ArrayList<>();
+    private final List<Track> tracks = new ArrayList<>();
 
     public void arrangeTalk(Talk talk) {
         boolean isAllTrackFull = true;

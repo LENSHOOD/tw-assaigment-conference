@@ -19,7 +19,7 @@ class ArrangeConferenceUseCaseTest {
         ByteArrayOutputStream os = new ByteArrayOutputStream();
 
         // when
-        new ArrangeConferenceUseCase().arrangeConferenceFrom(input, os);
+        new ArrangeConferenceUseCase().arrangeConference(input, os);
 
         // then
         String result = os.toString();

@@ -23,7 +23,7 @@ public class Entrance {
             Files.readAllLines(inputFilePath).forEach(System.out::println);
 
             System.out.printf("%nTest Output:%n");
-            new ArrangeConferenceUseCase().arrangeConferenceFrom(inputFilePath, System.out);
+            new ArrangeConferenceUseCase().arrangeConference(inputFilePath, System.out);
         } catch (Exception e) {
             System.out.printf("Failed to arrange conference. %s%n", e.getMessage());
             System.exit(1);
